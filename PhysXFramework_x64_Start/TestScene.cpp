@@ -49,29 +49,30 @@ void TestScene::Update()
 	const float totalTime = m_SceneContext.GetGameTime()->GetTotal();
 	m_pBox->RotateDegrees(0.f, m_RotSpeed * totalTime, 0.f);
 
-	XMFLOAT3 translation{};
 
 	const float movSpeed{ m_MovSpeed * m_SceneContext.GetGameTime()->GetElapsed() };
 
+	m_BoxTranslation = {};
+
 	if(m_SceneContext.GetInput()->IsActionTriggered(LEFT))
 	{
-		translation.x -= movSpeed;
+		m_BoxTranslation.x -= movSpeed;
 	}
 	if (m_SceneContext.GetInput()->IsActionTriggered(RIGHT))
 	{
-		translation.x += movSpeed;
+		m_BoxTranslation.x += movSpeed;
 	}
 	if (m_SceneContext.GetInput()->IsActionTriggered(UP))
 	{
-		translation.y += movSpeed;
+		m_BoxTranslation.y += movSpeed;
 	}
 	if (m_SceneContext.GetInput()->IsActionTriggered(DOWN))
 	{
-		translation.y -= movSpeed;
+		m_BoxTranslation.y -= movSpeed;
 	}
 
-	XMStoreFloat3(&translation, XMVectorAdd(XMLoadFloat3(&translation), XMLoadFloat3(&m_pBox->GetPosition())));
-	m_pBox->Translate(translation);
+	XMStoreFloat3(&m_BoxTranslation, XMLoadFloat3(&m_BoxTranslation) + XMLoadFloat3(&m_pBox->GetPosition()));
+	m_pBox->Translate(m_BoxTranslation);
 }
 
 void TestScene::Draw() const

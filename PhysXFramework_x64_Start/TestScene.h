@@ -34,5 +34,7 @@ private:
 	const float m_RotSpeed{ 90.f };
 	const float m_MovSpeed{ 5.f };
 
+	XMFLOAT3 m_BoxTranslation{};
+
 };
 
