@@ -9,7 +9,7 @@
 
 void W1_AssignmentScene::Initialize()
 {
-	std::srand(std::time(nullptr));
+	srand(static_cast<unsigned int>(time(nullptr)));
 
 	EnablePhysxDebugRendering(true);
 
@@ -17,9 +17,9 @@ void W1_AssignmentScene::Initialize()
 
 	const PxMaterial* pDefaultMaterialBox = pPhysX->createMaterial(0.1f, 0.1f, 0.5f);
 
-	const PxMaterial* pDefaultMaterialPlane = pPhysX->createMaterial(0.f, 0.f, 0.2f);
+	const PxMaterial* pDefaultMaterialPlane = pPhysX->createMaterial(0.5f, 0.5f, 0.2f);
 
-	const PxMaterial* pDefaultMaterialSphere = pPhysX->createMaterial(0.4f, 0.4f, 0.2f);
+	const PxMaterial* pDefaultMaterialSphere = pPhysX->createMaterial(0.7f, 0.7f, 0.2f);
 
 	//boxes
 	m_pBoxes.resize(m_AmountBlocks * m_AmountBlocks);
@@ -39,7 +39,7 @@ void W1_AssignmentScene::Initialize()
 
 
 	//floor
-	m_pFloor = new CubePosColorNorm(m_BoxDimension.x * m_FloorScale, m_BoxDimension.y * 0.1, m_BoxDimension.z * m_FloorScale, XMFLOAT4{ 1.f, 1.f, 1.f, 1.f });
+	m_pFloor = new CubePosColorNorm(m_BoxDimension.x * m_FloorScale, m_BoxDimension.y * 0.1f, m_BoxDimension.z * m_FloorScale, XMFLOAT4{ 1.f, 1.f, 1.f, 1.f });
 
 	AddGameObject(m_pFloor);
 
@@ -69,7 +69,7 @@ void W1_AssignmentScene::Initialize()
 	m_pSphere->AttachRigidActor(pSphereActor);
 
 	//set all the gameobject on their right pos
-	Reset();
+	Reset(true);
 
 	//input
 	m_SceneContext.GetInput()->AddInputAction(InputAction
@@ -172,7 +172,7 @@ void W1_AssignmentScene::OnSceneDeactivated()
 {
 }
 
-void W1_AssignmentScene::Reset() const
+void W1_AssignmentScene::Reset(const bool isInitializing) const
 {
 
 	constexpr float boxOffset{ 0.1f };
@@ -198,21 +198,33 @@ void W1_AssignmentScene::Reset() const
 	
 			m_pBoxes[index]->Translate( trans );
 	
-			const int randomY = rand() % 21 - 10;
+			const float randomY = static_cast<float>(rand() % 21 - 10);
 	
 			m_pBoxes[index]->RotateDegrees( 0, randomY ,0 );
-	
+
+			if (isInitializing) continue;;
+
+			if (PxRigidActor* rigidActor = m_pBoxes[index]->GetRigidActor(); rigidActor->is<physx::PxRigidDynamic>())
+			{
+				PxRigidDynamic* rigidDynamic = static_cast<PxRigidDynamic*>(rigidActor);
+
+				rigidDynamic->putToSleep();
+				rigidDynamic->wakeUp();
+			}
 		}
 	}
 
 	m_pSphere->Translate(0, 1, -10);
+	m_pSphere->RotateDegrees(0, 0, 0);
+
+	if (isInitializing) return;
 
 	if (PxRigidActor* rigidActor = m_pSphere->GetRigidActor(); rigidActor->is<physx::PxRigidDynamic>())
 	{
 		PxRigidDynamic* rigidDynamic = static_cast<PxRigidDynamic*>(rigidActor);
 
-		//rigidDynamic->setForceAndTorque({0,0,0},{0,0,0});
-		//rigidDynamic->clearTorque();
+		rigidDynamic->putToSleep();
+		rigidDynamic->wakeUp();
 	}
 
 }

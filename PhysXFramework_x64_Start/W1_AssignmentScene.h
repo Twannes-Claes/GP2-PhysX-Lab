@@ -38,11 +38,11 @@ private:
 
 	GameObject* m_pSphere{ nullptr };
 
-	void Reset() const;
-
 	const XMFLOAT3 m_BoxDimension{ 1.f , 1.f, 1.f };
 
 	const float m_FloorScale{ 50.f };
+
+	void Reset(const bool isInitializing = false) const;
 
 };
 

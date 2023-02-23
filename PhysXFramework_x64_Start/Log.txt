@@ -1,19 +1,24 @@
-[2023-2-22 - 22:50:48:649][DEBUG]   Adapter 0 : NVIDIA GeForce RTX 3060 Laptop GPU
-[2023-2-22 - 22:50:48:651][DEBUG]   Adapter 1 : AMD Radeon(TM) Graphics
-[2023-2-22 - 22:50:48:653][DEBUG]   Adapter 2 : Microsoft Basic Render Driver
-[2023-2-22 - 22:50:48:654][DEBUG]   3 Adapter(s) found
-[2023-2-22 - 22:50:48:655][DEBUG]   InitalizeAdapterAndOutput ok.
-[2023-2-22 - 22:50:48:656][DEBUG]   Window Class Created
-[2023-2-22 - 22:50:48:657][DEBUG]   Desktop resolution: 2560 x 1440
-[2023-2-22 - 22:50:48:751][DEBUG]   Window Opened
-[2023-2-22 - 22:50:49:243][DEBUG]   Direct3D Initialized
-[2023-2-22 - 22:50:49:777][DEBUG]   Managers Initialized!
-[2023-2-22 - 22:50:49:780][INFO]    Press 'Page Up' or 'Page Down' to cycle between the different scenes
-[2023-2-22 - 22:50:49:781][INFO]    Press 'I' to toggle the debug renderer.
-[2023-2-22 - 22:50:49:782][INFO]    Press 'M' to do physics stepping.
-[2023-2-22 - 22:50:49:783][INFO]    Press 'L' to stop doing physics stepping.
-[2023-2-22 - 22:50:50:1][DEBUG]   Scenes Initialized!
-[2023-2-22 - 22:50:50:2][INFO]    Scene Activated > "TestScene"
-[2023-2-22 - 22:50:54:0][INFO]    Scene Activated > "W1_AssignmentScene"
-[2023-2-22 - 22:50:54:38][DEBUG]   DebugRenderer::Draw() > Increasing Vertexbuffer Size!
-[2023-2-22 - 22:51:26:355][DEBUG]   Core Initialization Finished
+[2023-2-23 - 16:45:17:193][DEBUG]   Adapter 0 : NVIDIA GeForce RTX 3060 Laptop GPU
+[2023-2-23 - 16:45:17:195][DEBUG]   Adapter 1 : AMD Radeon(TM) Graphics
+[2023-2-23 - 16:45:17:198][DEBUG]   Adapter 2 : Microsoft Basic Render Driver
+[2023-2-23 - 16:45:17:199][DEBUG]   3 Adapter(s) found
+[2023-2-23 - 16:45:17:201][DEBUG]   InitalizeAdapterAndOutput ok.
+[2023-2-23 - 16:45:17:202][DEBUG]   Window Class Created
+[2023-2-23 - 16:45:17:203][DEBUG]   Desktop resolution: 2560 x 1440
+[2023-2-23 - 16:45:17:308][DEBUG]   Window Opened
+[2023-2-23 - 16:45:17:845][DEBUG]   Direct3D Initialized
+[2023-2-23 - 16:45:18:344][DEBUG]   Managers Initialized!
+[2023-2-23 - 16:45:18:347][INFO]    Press 'Page Up' or 'Page Down' to cycle between the different scenes
+[2023-2-23 - 16:45:18:348][INFO]    Press 'I' to toggle the debug renderer.
+[2023-2-23 - 16:45:18:349][INFO]    Press 'M' to do physics stepping.
+[2023-2-23 - 16:45:18:351][INFO]    Press 'L' to stop doing physics stepping.
+[2023-2-23 - 16:45:18:556][DEBUG]   Scenes Initialized!
+[2023-2-23 - 16:45:18:557][INFO]    Scene Activated > "TestScene"
+[2023-2-23 - 16:45:19:767][INFO]    Scene Activated > "W1_AssignmentScene"
+[2023-2-23 - 16:45:19:805][DEBUG]   DebugRenderer::Draw() > Increasing Vertexbuffer Size!
+[2023-2-23 - 16:45:23:662][INFO]    Scene Activated > "TestScene"
+[2023-2-23 - 16:45:24:220][INFO]    Scene Activated > "PhysXTestScene"
+[2023-2-23 - 16:45:24:730][INFO]    Scene Activated > "GameScene"
+[2023-2-23 - 16:45:24:753][DEBUG]   DebugRenderer::Draw() > Increasing Vertexbuffer Size!
+[2023-2-23 - 16:45:27:218][INFO]    Scene Activated > "BoxForceScene"
+[2023-2-23 - 16:46:47:876][DEBUG]   Core Initialization Finished
