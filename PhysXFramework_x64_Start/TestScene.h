@@ -18,7 +18,6 @@ public:
 		RIGHT,
 	};
 
-protected:
 	void Initialize() override;
 	void Update() override;
 	void Draw() const override;

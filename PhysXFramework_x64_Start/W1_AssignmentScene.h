@@ -34,6 +34,8 @@ private:
 
 	std::vector<GameObject*> m_pBoxes{ nullptr };
 
+	PxRigidDynamic* pSphereActor{};
+
 	GameObject* m_pFloor{ nullptr };
 
 	GameObject* m_pSphere{ nullptr };

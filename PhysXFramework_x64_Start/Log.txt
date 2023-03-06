@@ -1,24 +1,21 @@
-[2023-2-23 - 16:45:17:193][DEBUG]   Adapter 0 : NVIDIA GeForce RTX 3060 Laptop GPU
-[2023-2-23 - 16:45:17:195][DEBUG]   Adapter 1 : AMD Radeon(TM) Graphics
-[2023-2-23 - 16:45:17:198][DEBUG]   Adapter 2 : Microsoft Basic Render Driver
-[2023-2-23 - 16:45:17:199][DEBUG]   3 Adapter(s) found
-[2023-2-23 - 16:45:17:201][DEBUG]   InitalizeAdapterAndOutput ok.
-[2023-2-23 - 16:45:17:202][DEBUG]   Window Class Created
-[2023-2-23 - 16:45:17:203][DEBUG]   Desktop resolution: 2560 x 1440
-[2023-2-23 - 16:45:17:308][DEBUG]   Window Opened
-[2023-2-23 - 16:45:17:845][DEBUG]   Direct3D Initialized
-[2023-2-23 - 16:45:18:344][DEBUG]   Managers Initialized!
-[2023-2-23 - 16:45:18:347][INFO]    Press 'Page Up' or 'Page Down' to cycle between the different scenes
-[2023-2-23 - 16:45:18:348][INFO]    Press 'I' to toggle the debug renderer.
-[2023-2-23 - 16:45:18:349][INFO]    Press 'M' to do physics stepping.
-[2023-2-23 - 16:45:18:351][INFO]    Press 'L' to stop doing physics stepping.
-[2023-2-23 - 16:45:18:556][DEBUG]   Scenes Initialized!
-[2023-2-23 - 16:45:18:557][INFO]    Scene Activated > "TestScene"
-[2023-2-23 - 16:45:19:767][INFO]    Scene Activated > "W1_AssignmentScene"
-[2023-2-23 - 16:45:19:805][DEBUG]   DebugRenderer::Draw() > Increasing Vertexbuffer Size!
-[2023-2-23 - 16:45:23:662][INFO]    Scene Activated > "TestScene"
-[2023-2-23 - 16:45:24:220][INFO]    Scene Activated > "PhysXTestScene"
-[2023-2-23 - 16:45:24:730][INFO]    Scene Activated > "GameScene"
-[2023-2-23 - 16:45:24:753][DEBUG]   DebugRenderer::Draw() > Increasing Vertexbuffer Size!
-[2023-2-23 - 16:45:27:218][INFO]    Scene Activated > "BoxForceScene"
-[2023-2-23 - 16:46:47:876][DEBUG]   Core Initialization Finished
+[2023-3-1 - 12:9:36:160][DEBUG]   Adapter 0 : NVIDIA GeForce RTX 3060 Laptop GPU
+[2023-3-1 - 12:9:36:162][DEBUG]   Adapter 1 : AMD Radeon(TM) Graphics
+[2023-3-1 - 12:9:36:164][DEBUG]   Adapter 2 : Microsoft Basic Render Driver
+[2023-3-1 - 12:9:36:166][DEBUG]   3 Adapter(s) found
+[2023-3-1 - 12:9:36:167][DEBUG]   InitalizeAdapterAndOutput ok.
+[2023-3-1 - 12:9:36:169][DEBUG]   Window Class Created
+[2023-3-1 - 12:9:36:171][DEBUG]   Desktop resolution: 1920 x 1080
+[2023-3-1 - 12:9:36:279][DEBUG]   Window Opened
+[2023-3-1 - 12:9:36:964][DEBUG]   Direct3D Initialized
+[2023-3-1 - 12:9:38:10][DEBUG]   Managers Initialized!
+[2023-3-1 - 12:9:38:15][INFO]    Press 'Page Up' or 'Page Down' to cycle between the different scenes
+[2023-3-1 - 12:9:38:18][INFO]    Press 'I' to toggle the debug renderer.
+[2023-3-1 - 12:9:38:20][INFO]    Press 'M' to do physics stepping.
+[2023-3-1 - 12:9:38:23][INFO]    Press 'L' to stop doing physics stepping.
+[2023-3-1 - 12:9:38:104][DEBUG]   Parsing mesh: Level.obj
+[2023-3-1 - 12:9:38:154][DEBUG]   Parsing mesh: Chair.obj
+[2023-3-1 - 12:9:38:159][DEBUG]   Scenes Initialized!
+[2023-3-1 - 12:9:38:598][DEBUG]   DebugRenderer::Draw() > Increasing Vertexbuffer Size!
+[2023-3-1 - 12:9:40:666][INFO]    Trigger FOUND trigger box BLUE
+[2023-3-1 - 12:9:44:64][INFO]    Trigger FOUND trigger box RED
+[2023-3-1 - 12:9:52:828][DEBUG]   Core Initialization Finished

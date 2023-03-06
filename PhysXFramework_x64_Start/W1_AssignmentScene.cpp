@@ -58,7 +58,7 @@ void W1_AssignmentScene::Initialize()
 
 	AddGameObject(m_pSphere);
 
-	PxRigidDynamic* pSphereActor = pPhysX->createRigidDynamic(PxTransform{ PxIdentity });
+	pSphereActor = pPhysX->createRigidDynamic(PxTransform{ PxIdentity });
 
 	const PxSphereGeometry pSphereGeo = PxSphereGeometry(1.f);
 
@@ -106,13 +106,13 @@ void W1_AssignmentScene::Update()
 	if (m_SceneContext.GetInput()->IsKeyboardKey(InputTriggerState::pressed, VK_SPACE))
 	{
 		
-		if (PxRigidActor* rigidActor = m_pSphere->GetRigidActor(); rigidActor->is<physx::PxRigidDynamic>())
-		{
-			PxRigidDynamic* rigidDynamic = static_cast<PxRigidDynamic*>(rigidActor);
-
-			rigidDynamic->addForce({0,150,0}, PxForceMode::eIMPULSE);
-		}
-		
+		//if (PxRigidActor* rigidActor = m_pSphere->GetRigidActor(); rigidActor->is<physx::PxRigidDynamic>())
+		//{
+		//	PxRigidDynamic* rigidDynamic = static_cast<PxRigidDynamic*>(rigidActor);
+		//
+		//	rigidDynamic->addForce({0,150,0}, PxForceMode::eIMPULSE);
+		//}
+		pSphereActor->addForce({ 0,150,0 }, PxForceMode::eIMPULSE);
 	}
 
 
@@ -219,12 +219,17 @@ void W1_AssignmentScene::Reset(const bool isInitializing) const
 
 	if (isInitializing) return;
 
-	if (PxRigidActor* rigidActor = m_pSphere->GetRigidActor(); rigidActor->is<physx::PxRigidDynamic>())
-	{
-		PxRigidDynamic* rigidDynamic = static_cast<PxRigidDynamic*>(rigidActor);
+	//if (PxRigidActor* rigidActor = m_pSphere->GetRigidActor(); rigidActor->is<physx::PxRigidDynamic>())
+	//{
+	//	PxRigidDynamic* rigidDynamic = static_cast<PxRigidDynamic*>(rigidActor);
+	//
+	//	//i could also just save the rigid body and no need for casts then
+	//
+	//	rigidDynamic->putToSleep();
+	//	rigidDynamic->wakeUp();
+	//}
 
-		rigidDynamic->putToSleep();
-		rigidDynamic->wakeUp();
-	}
+	pSphereActor->putToSleep();
+	pSphereActor->wakeUp();
 
 }
